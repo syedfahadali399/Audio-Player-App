@@ -4,55 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Audio Player App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section id="section">
 
-    <!-- Header -->
-    <header>
-      <h1>🎵 My Audio Player</h1>
-    </header>
+    <h1>🎵 My Audio Player</h1>
 
-    <!-- Audio Player Element (Hidden by default) -->
-    <audio id="audio-player" src=""></audio>
+    <audio id="audio-player"></audio>
 
-    <!-- Audio Upload Feature -->
-    <div id="audio-upload">
-      <label>Choose an audio file:</label>
-      <input type="file" id="audio-file" accept="audio/*">
-      <button type="submit" id="add-song">add to playlist</button>
-      <button type="reset" id="reset-btn">Reset</button>
-    </div>
-
-    <!-- Controls -->
     <div class="controls">
-      <button id="prev-btn">⏮️</button>
-      <button id="play-pause-btn">▶️</button>
-      <button id="next-btn">⏭️</button>
+      <button id="prev-btn">⏮ Prev</button>
+      <button id="play-pause-btn">▶️ Play</button>
+      <button id="next-btn">⏭ Next</button>
     </div>
 
-    <!-- Progress Bar -->
     <div class="progress-container">
       <span id="current-time">00:00</span>
       <input type="range" id="progress-bar" value="0" min="0" max="100">
       <span id="duration">00:00</span>
     </div>
 
-    <!-- Volume Control -->
     <div class="volume-control">
       <label for="volume-slider">🔊</label>
       <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
     </div>
 
-    <!-- Playlist Section -->
+    <div id="audio-upload">
+      <input type="file" id="audio-file" accept="audio/*">
+      <button id="add-song">Add to Playlist</button>
+    </div>
+
     <div id="playlist">
       <h3>Playlist</h3>
-      <div id="playlist-list">
-        <!-- Dynamically add songs here -->
-      </div>
+      <ul id="playlist-list"></ul>
     </div>
 
   </section>
-  <script src="java.js"></script>
+  <script src="java2.js"></script>
 </body>
 </html>
+
